@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Titillium+Web:wght@300;400;600;700&display=swap");
+.main-header {
+  display: grid;
+  gap: 10px;
+  grid-template: 'nav logo tools';
+  grid-template-columns: repeat(3, 1fr);
+  padding: 18px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-header__logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+}
+
+.main-header__logo .logo {
+  width: 100%;
+}
+
+.main-header__nav {
+  grid-area: nav;
+}
+
+.main-header__nav .menu {
+  display: none;
+}
+
+.main-header__nav .menu-link {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.main-header__nav span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 2px;
+  background-color: #494949;
+}
+
+.main-header__nav span:nth-of-type(1) {
+  top: 0;
+}
+
+.main-header__nav span:nth-of-type(2) {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.main-header__nav span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.main-header__tools {
+  grid-area: tools;
+  justify-self: end;
+  align-self: center;
+  padding: 5px;
+}
+
+.main-header__tools i {
+  font-size: 17px;
+  color: #494949;
+  padding: 5px;
+}
+
+.main-header .menu .menu-item a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
