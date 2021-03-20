@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Titillium+Web:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  height: 200vh;
 }
 
 .container {
@@ -169,13 +166,14 @@ body {
   }
   .main-header__nav .menu .menu-item a.news:hover {
     background-color: #fff;
+    color: #393939;
   }
   .main-header__nav .menu-link {
     display: none;
   }
 }
 
-section {
+.main-banner {
   margin: 0;
   padding: 20px;
   position: relative;
@@ -190,22 +188,23 @@ section {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  section {
-    background-position-y: 20vh;
-    background-position-x: 55vw;
-    background-size: 45vw;
+  .main-banner {
+    background-position-y: 30vh;
+    background-position-x: 45vw;
+    background-size: 55vw;
+    height: 90vh;
   }
 }
 
 @media (min-width: 1024px) {
-  section {
+  .main-banner {
     background-position-y: 10vh;
     background-position-x: 65vw;
     background-size: 35vw;
   }
 }
 
-section .head {
+.main-banner .head {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,20 +216,20 @@ section .head {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  section .head {
+  .main-banner .head {
     position: relative;
     top: -10vh;
   }
 }
 
 @media (min-width: 1024px) {
-  section .head {
+  .main-banner .head {
     position: relative;
     top: 5vh;
   }
 }
 
-section .head h1 {
+.main-banner .head h1 {
   text-align: center;
   font-size: 30px;
   line-height: 35px;
@@ -238,18 +237,18 @@ section .head h1 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  section .head h1 {
+  .main-banner .head h1 {
     font-size: 40px;
   }
 }
 
 @media (min-width: 1024px) {
-  section .head h1 {
+  .main-banner .head h1 {
     font-size: 65px;
   }
 }
 
-section .head span {
+.main-banner .head span {
   margin-top: 20px;
   margin-left: 0;
   font-size: 21px;
@@ -258,7 +257,7 @@ section .head span {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  section .head span {
+  .main-banner .head span {
     font-size: 26px;
     margin-top: 30px;
     text-align: left;
@@ -269,7 +268,7 @@ section .head span {
 }
 
 @media (min-width: 1024px) {
-  section .head span {
+  .main-banner .head span {
     font-size: 35px;
     text-align: left;
     font-weight: 600;
@@ -279,7 +278,7 @@ section .head span {
   }
 }
 
-section .head a {
+.main-banner .head a {
   text-decoration: 0;
   margin: 30px;
   font-size: 20px;
@@ -287,10 +286,17 @@ section .head a {
   color: #E28E8C;
   border: 3px solid #E28E8C;
   padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-banner .head a:hover {
+  background-color: #fff;
+  color: #393939;
+  border: 4px solid #393939;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  section .head a {
+  .main-banner .head a {
     margin-top: 40px;
     font-size: 25px;
     padding: 10px 40px;
@@ -298,12 +304,247 @@ section .head a {
 }
 
 @media (min-width: 1024px) {
-  section .head a {
+  .main-banner .head a {
     margin-top: 40px;
     font-size: 25px;
     padding: 10px 50px;
     font-size: 30px;
     border: 4px solid #E28E8C;
   }
+}
+
+.products .bgc {
+  background-color: #E28E8C;
+}
+
+.products .bgc .header-text {
+  text-align: center;
+  line-height: 90px;
+  font-size: 45px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+.products .categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products .categories {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 40vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products .categories {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60vh;
+  }
+}
+
+.products .categories .cat-card {
+  height: 60vh;
+  text-decoration: none;
+}
+
+.products .categories .cat-card:hover h2 {
+  letter-spacing: 18px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products .categories .cat-card {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products .categories .cat-card {
+    height: 45vh;
+  }
+}
+
+.products .categories .cat-card img {
+  width: 90vw;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products .categories .cat-card img {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products .categories .cat-card img {
+    width: 25vw;
+  }
+}
+
+.products .categories .cat-card h2 {
+  text-align: center;
+  color: #393939;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin-top: 2px;
+  transition: all 0.8s ease-in-out;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products .categories .cat-card h2 {
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin-top: 10px;
+  }
+}
+
+.products .container .promo-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products .container .promo-products {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products .container .promo-products {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 70vh;
+  }
+}
+
+.products .container .promo-products .product {
+  width: 70vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products .container .promo-products .product {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products .container .promo-products .product {
+    width: 30vw;
+  }
+}
+
+.products .container .promo-products .product img {
+  width: 70vw;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products .container .promo-products .product img {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products .container .promo-products .product img {
+    width: 15vw;
+  }
+}
+
+.products .container .promo-products .product .price {
+  font-weight: 600;
+  margin: 15px;
+}
+
+.products .container .promo-products .product .price span {
+  margin: 20px;
+}
+
+.products .container .promo-products .product .price .cross {
+  text-decoration: line-through;
+}
+
+.products .container .promo-products .product .button {
+  color: #E28E8C;
+  font-weight: 600;
+  border: 3px solid #E28E8C;
+  width: 70%;
+  padding: 12px 0;
+  transition: ease-in-out all 0.3s;
+}
+
+@media (min-width: 1024px) {
+  .products .container .promo-products .product .button {
+    width: 40%;
+  }
+}
+
+.products .container .promo-products .product .button:hover {
+  background-color: #fff;
+  color: #393939;
+  border: 3px solid #393939;
+  cursor: pointer;
+}
+
+.products .container .header-text {
+  text-align: center;
+  line-height: 90px;
+  font-size: 45px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #393939;
+}
+
+@media (min-width: 1024px) {
+  .products .container .header-text {
+    position: relative;
+    top: 30px;
+  }
+}
+
+.products .container .more-sales {
+  text-align: center;
+  font-size: 38px;
+  line-height: 90px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #E28E8C;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .products .container .more-sales {
+    position: relative;
+    bottom: 60px;
+  }
+}
+
+.products .container .more-sales:hover {
+  color: #393939;
+  cursor: pointer;
+}
+
+.newsletter {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

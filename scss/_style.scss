@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 200vh;
-}
+
 
 .container {
     overflow-x: hidden;
@@ -198,7 +196,7 @@ body {
 
 
                         &:hover {
-                            background-color: #fff;
+                            @include buttonHover;
                         }
                     }
                 }
@@ -217,7 +215,7 @@ body {
 
 // Main Banner
 
-section {
+.main-banner {
     margin: 0;
     padding: 20px;
     position: relative;
@@ -231,9 +229,10 @@ section {
     height: 100vh;
 
     @include tablet {
-        background-position-y: 20vh;
-        background-position-x: 55vw;
-        background-size: 45vw;
+        background-position-y: 30vh;
+        background-position-x: 45vw;
+        background-size: 55vw;
+        height: 90vh;
     }
 
     @include desktop {
@@ -316,6 +315,13 @@ section {
             color: $pinkColor;
             border: 3px solid #E28E8C;
             padding: 10px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #fff;
+                color: #393939;
+                border: 4px solid #393939;
+            }
 
             @include tablet {
                 margin-top: 40px;
@@ -333,4 +339,225 @@ section {
         }
     }
 
+}
+
+// Categories 
+.products {
+    .bgc {
+        background-color: $pinkColor;
+
+        .header-text {
+            text-align: center;
+            line-height: 90px;
+            font-size: 45px;
+            font-family: $roboto;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 4px;
+        }
+    }
+
+    .categories {
+
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: $roboto;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-around;
+            height: 40vh;
+        }
+
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-around;
+            height: 60vh;
+        }
+
+        .cat-card {
+            height: 60vh;
+            text-decoration: none;
+
+
+            &:hover h2 {
+                letter-spacing: 18px;
+
+            }
+
+            @include tablet {
+                height: 25vh;
+            }
+
+            @include desktop {
+                height: 45vh;
+            }
+
+            img {
+                width: 90vw;
+
+
+                @include tablet {
+                    width: 30vw;
+                }
+
+                @include desktop {
+                    width: 25vw;
+                }
+            }
+
+            h2 {
+                text-align: center;
+                color: #393939;
+                font-size: 30px;
+                text-transform: uppercase;
+                font-weight: 400;
+                letter-spacing: 5px;
+                margin-top: 2px;
+                transition: all 0.8s ease-in-out;
+
+                @include tablet {
+                    font-size: 30px;
+                    letter-spacing: 8px;
+                    margin-top: 10px;
+                }
+
+            }
+        }
+    }
+
+    .container {
+
+
+        .promo-products {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            font-family: $roboto;
+
+
+
+            @include tablet {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            @include desktop {
+                flex-direction: row;
+                justify-content: space-around;
+                height: 70vh;
+            }
+
+
+            .product {
+                width: 70vw;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 75vh;
+
+                @include tablet {
+                    width: 30vw;
+                }
+
+                @include desktop {
+                    width: 30vw;
+                }
+
+                img {
+                    width: 70vw;
+
+                    @include tablet {
+                        width: 30vw;
+                    }
+
+                    @include desktop {
+                        width: 15vw;
+                    }
+                }
+
+                .price {
+                    font-weight: 600;
+                    margin: 15px;
+
+                    span {
+                        margin: 20px;
+                    }
+
+                    .cross {
+                        text-decoration: line-through;
+                    }
+                }
+
+                .button {
+                    color: $pinkColor;
+                    font-weight: 600;
+                    border: 3px solid #E28E8C;
+                    width: 70%;
+                    padding: 12px 0;
+                    transition: ease-in-out all 0.3s;
+
+                    @include desktop {
+                        width: 40%;
+                    }
+
+                    &:hover {
+                        @include buttonHover;
+                        border: 3px solid #393939;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .header-text {
+            text-align: center;
+            line-height: 90px;
+            font-size: 45px;
+            font-family: $roboto;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #393939;
+
+            @include desktop {
+                position: relative;
+                top: 30px;
+            }
+        }
+
+        .more-sales {
+            text-align: center;
+            font-size: 38px;
+            line-height: 90px;
+            font-family: $roboto;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: $pinkColor;
+            transition: all 0.3s ease-in-out;
+
+            @include desktop {
+                position: relative;
+                bottom: 60px;
+            }
+
+            &:hover {
+                color: #393939;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.newsletter {
+    height: 100vh;
 }
