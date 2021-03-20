@@ -1,3 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 200vh;
+}
+
+.container {
+    overflow-x: hidden;
+
+}
+
+
 .main-header {
     display: grid;
     gap: 10px;
@@ -9,16 +25,21 @@
     top: 0;
     left: 0;
     right: 0;
-
+    z-index: 2;
 
 
     &__logo {
         grid-area: logo;
         justify-self: center;
         align-self: center;
+        position: relative;
+
+
 
         .logo {
-            width: 100%;
+            width: 30vw;
+
+
         }
 
     }
@@ -28,6 +49,26 @@
 
         .menu {
             display: none;
+            list-style-type: none;
+
+            .menu-item {
+
+                a {
+                    text-decoration: none;
+                    padding: 0 32px;
+                    font-size: 17px;
+                    font-family: $navFont;
+                    color: $black;
+                    font-weight: 600;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $pinkColor;
+                    }
+
+                }
+            }
+
         }
 
         .menu-link {
@@ -35,31 +76,44 @@
             height: 20px;
             position: relative;
             top: 10px;
+
+            @include tablet {
+                top: 20px;
+                left: 10px;
+            }
+
+
+            span {
+                position: absolute;
+                left: 0;
+                right: 0;
+                display: block;
+                height: 2px;
+                background-color: $black;
+
+
+
+                &:nth-of-type(1) {
+                    top: 0;
+
+                }
+
+                &:nth-of-type(2) {
+                    bottom: 50%;
+                    transform: translateY(50%);
+
+                }
+
+                &:nth-of-type(3) {
+                    bottom: 0;
+                }
+
+
+            }
         }
-
-        span {
-            position: absolute;
-            left: 0;
-            right: 0;
-            display: block;
-            height: 2px;
-            background-color: $black;
-
-            &:nth-of-type(1) {
-                top: 0;
-            }
-
-            &:nth-of-type(2) {
-                bottom: 50%;
-                transform: translateY(50%);
-            }
-
-            &:nth-of-type(3) {
-                bottom: 0;
-            }
-        }
-
     }
+
+
 
     &__tools {
         grid-area: tools;
@@ -68,24 +122,215 @@
         padding: 5px;
 
 
+        @include desktop {
+            justify-self: center;
+            margin-top: 3%;
+        }
+
 
         i {
             font-size: 17px;
             color: $black;
             padding: 5px;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                color: $pinkColor;
+            }
+
+            @include tablet {
+                font-size: 25px;
+                padding: 10px;
+                top: -10px;
+
+
+            }
+
+            @include desktop {
+                top: 0;
+                right: 3vw;
+                padding-left: 2vw;
+                font-size: 1.3vw;
+
+
+            }
         }
 
 
 
     }
 
+    @include desktop {
+        grid-template: 'logo nav tools';
+
+        &__logo {
+
+            justify-self: center;
+            left: 10px;
+            top: 10px;
 
 
-    .menu {
-        .menu-item {
-            a {
-                text-decoration: none;
+            .logo {
+                width: 12vw;
+
+            }
+
+
+        }
+
+        &__nav {
+            justify-self: end;
+            margin-top: 3%;
+
+            .menu {
+                display: flex;
+
+                .menu-item {
+                    a {
+                        font-size: 20px;
+                    }
+
+                    a.news {
+                        color: white;
+                        background-color: $pinkColor;
+                        padding: 5px 15px;
+
+
+                        &:hover {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .menu-link {
+                display: none;
+
+            }
+
+
+        }
+    }
+
+}
+
+// Main Banner
+
+section {
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    background-image: url(../images/brush.png);
+    background-size: 100vw;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position-x: 65vw;
+    background-position-y: 8vh;
+    width: 100%;
+    height: 100vh;
+
+    @include tablet {
+        background-position-y: 20vh;
+        background-position-x: 55vw;
+        background-size: 45vw;
+    }
+
+    @include desktop {
+        background-position-y: 10vh;
+        background-position-x: 65vw;
+        background-size: 35vw;
+    }
+
+
+
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        width: 65vw;
+        font-family: $mainFont;
+        margin: 0;
+
+        @include tablet {
+            position: relative;
+            top: -10vh;
+        }
+
+        @include desktop {
+            position: relative;
+            top: 5vh
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            line-height: 35px;
+            color: #393939;
+
+            @include tablet {
+                font-size: 40px;
+            }
+
+            @include desktop {
+                font-size: 65px;
+            }
+        }
+
+        span {
+            margin-top: 20px;
+            margin-left: 0;
+            font-size: 21px;
+            font-weight: 100;
+            text-align: center;
+
+            @include tablet {
+                font-size: 26px;
+                margin-top: 30px;
+                text-align: left;
+                font-weight: 600;
+                color: #777777;
+                width: 50vw;
+            }
+
+            @include desktop {
+                font-size: 35px;
+                text-align: left;
+                font-weight: 600;
+                color: #777777;
+                width: 40vw;
+                margin-top: 70px;
+            }
+
+
+        }
+
+        a {
+            text-decoration: 0;
+            margin: 30px;
+            font-size: 20px;
+            font-weight: 700;
+            color: $pinkColor;
+            border: 3px solid #E28E8C;
+            padding: 10px;
+
+            @include tablet {
+                margin-top: 40px;
+                font-size: 25px;
+                padding: 10px 40px;
+            }
+
+            @include desktop {
+                margin-top: 40px;
+                font-size: 25px;
+                padding: 10px 50px;
+                font-size: 30px;
+                border: 4px solid #E28E8C;
             }
         }
     }
+
 }
