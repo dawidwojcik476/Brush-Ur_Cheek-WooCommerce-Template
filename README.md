@@ -8,5 +8,5 @@
 [homepage](https://user-images.githubusercontent.com/69675993/111916413-19990000-8a7b-11eb-908e-7eccacd163d0.png)
 
 
-<img align="left" width="1920" height="1080" src="https://user-images.githubusercontent.com/69675993/111916413-19990000-8a7b-11eb-908e-7eccacd163d0.png">
+<img align="left" width="500" height="200" src="https://user-images.githubusercontent.com/69675993/111916413-19990000-8a7b-11eb-908e-7eccacd163d0.png">
 
