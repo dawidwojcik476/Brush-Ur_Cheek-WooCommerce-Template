@@ -7,7 +7,6 @@
 [Link to demo](https://dawidwojcik476.github.io/Brush-Ur_Cheek-WooCommerce-Template)
 
 
-[homepage](https://user-images.githubusercontent.com/69675993/111916413-19990000-8a7b-11eb-908e-7eccacd163d0.png)
 
 
 
