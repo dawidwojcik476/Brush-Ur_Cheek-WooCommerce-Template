@@ -16,7 +16,7 @@
   grid-template: 'nav logo tools';
   grid-template-columns: repeat(3, 1fr);
   padding: 18px;
-  background-color: #fff;
+  background-color: transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -51,7 +51,7 @@
   font-family: "Titillium Web", sans-serif;
   color: #494949;
   font-weight: 600;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .main-header__nav .menu .menu-item a:hover {
@@ -113,7 +113,7 @@
   color: #494949;
   padding: 5px;
   position: relative;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .main-header__tools i:hover {
@@ -167,6 +167,7 @@
   .main-header__nav .menu .menu-item a.news:hover {
     background-color: #fff;
     color: #393939;
+    background-color: transparent;
   }
   .main-header__nav .menu-link {
     display: none;
@@ -314,7 +315,7 @@
 }
 
 .products .bgc {
-  background-color: #E28E8C;
+  background-color: #fab5b3;
 }
 
 .products .bgc .header-text {
@@ -544,7 +545,188 @@
   cursor: pointer;
 }
 
+input {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 16px;
+}
+
 .newsletter {
-  height: 100vh;
+  background-color: #fab5b3;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.newsletter .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .newsletter .container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsletter .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.newsletter .container h1 {
+  font-size: 25px;
+  font-weight: 300;
+  color: #393939;
+}
+
+@media (min-width: 1024px) {
+  .newsletter .container h1 {
+    font-size: 30px;
+    width: 30%;
+  }
+}
+
+.newsletter .container .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .newsletter .container .form {
+    width: 30%;
+  }
+}
+
+.newsletter .container .form__email {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #2e2e2e;
+  font-size: 15px;
+}
+
+.newsletter .container .form__submit {
+  width: 50%;
+  padding: 5px;
+  border: 2px solid #4d4c4c;
+  font-size: 20px;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1px;
+  transition: 1s all ease-in-out;
+}
+
+.newsletter .container .form__submit:hover {
+  cursor: pointer;
+  letter-spacing: 4px;
+}
+
+footer {
+  font-family: "Titillium Web", sans-serif;
+  padding: 20px;
+}
+
+footer .top-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .top-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .top-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+footer .top-footer .footer-menu {
+  margin-top: 3vh;
+}
+
+footer .top-footer .footer-menu h3 {
+  font-size: 21px;
+  display: flex;
+  justify-content: space-between;
+  color: #393939;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .top-footer .footer-menu h3 {
+    justify-content: start;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .top-footer .footer-menu h3 {
+    justify-content: start;
+    align-items: center;
+  }
+}
+
+footer .top-footer .footer-menu ul {
+  margin-top: 10px;
+  list-style-type: none;
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .top-footer .footer-menu ul {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .top-footer .footer-menu ul {
+    display: block;
+  }
+}
+
+footer .top-footer .footer-menu ul li a {
+  text-decoration: none;
+  color: #393939;
+  padding: 10px 0;
+  font-size: 20px;
+  display: block;
+}
+
+footer .top-footer .footer-menu ul li a:hover {
+  color: #E28E8C;
+}
+
+footer .copyrights {
+  margin-top: 4vh;
+}
+
+footer .copyrights .socials {
+  display: flex;
+  justify-content: center;
+}
+
+footer .copyrights .socials a {
+  padding: 20px;
+  color: #393939;
+}
+
+footer .copyrights .socials a:hover {
+  color: #E28E8C;
+}
+
+footer .copyrights .copyright {
+  text-align: center;
+  color: #4d4c4c;
 }
 /*# sourceMappingURL=style.css.map */

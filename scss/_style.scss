@@ -18,12 +18,14 @@
     grid-template: 'nav logo tools';
     grid-template-columns: repeat(3, 1fr);
     padding: 18px;
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
+
+
 
 
     &__logo {
@@ -58,7 +60,7 @@
                     font-family: $navFont;
                     color: $black;
                     font-weight: 600;
-                    transition: all 0.3s ease-in-out;
+                    transition: all 0.2s ease-in-out;
 
                     &:hover {
                         color: $pinkColor;
@@ -131,7 +133,7 @@
             color: $black;
             padding: 5px;
             position: relative;
-            transition: all 0.2s ease-in-out;
+            transition: all 0.1s ease-in-out;
 
             &:hover {
                 color: $pinkColor;
@@ -197,6 +199,7 @@
 
                         &:hover {
                             @include buttonHover;
+                            background-color: transparent;
                         }
                     }
                 }
@@ -344,7 +347,7 @@
 // Categories 
 .products {
     .bgc {
-        background-color: $pinkColor;
+        background-color: #fab5b3;
 
         .header-text {
             text-align: center;
@@ -558,6 +561,197 @@
 
 }
 
+// Newsletter section
+
+input {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 16px;
+}
+
 .newsletter {
-    height: 100vh;
+    background-color: #fab5b3;
+    font-family: $navFont;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3vw;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+
+
+        h1 {
+            font-size: 25px;
+            font-weight: 300;
+
+            color: #393939;
+
+            @include desktop {
+                font-size: 30px;
+                width: 30%;
+            }
+
+        }
+
+        .form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include desktop {
+                width: 30%;
+            }
+
+
+
+            &__email {
+                width: 100%;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #2e2e2e;
+                font-size: 15px;
+            }
+
+            &__submit {
+
+                width: 50%;
+                padding: 5px;
+                border: 2px solid #4d4c4c;
+                font-size: 20px;
+                font-family: $navFont;
+
+                letter-spacing: 1px;
+                transition: 1s all ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    letter-spacing: 4px;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+// Footer
+footer {
+    font-family: $navFont;
+    padding: 20px;
+
+
+    .top-footer {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+
+
+
+        .footer-menu {
+            margin-top: 3vh;
+
+
+            h3 {
+                font-size: 21px;
+                display: flex;
+                justify-content: space-between;
+                color: #393939;
+
+                @include tablet {
+                    justify-content: start;
+                    align-items: center;
+
+                }
+
+                @include desktop {
+                    justify-content: start;
+                    align-items: center;
+
+                }
+
+            }
+
+            ul {
+                margin-top: 10px;
+                list-style-type: none;
+                display: none;
+
+                @include tablet {
+                    display: block;
+                }
+
+                @include desktop {
+                    display: block;
+                }
+
+                li {
+
+
+                    a {
+                        text-decoration: none;
+                        color: #393939;
+                        padding: 10px 0;
+                        font-size: 20px;
+                        display: block;
+
+                        &:hover {
+                            color: $pinkColor;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .copyrights {
+        margin-top: 4vh;
+
+        .socials {
+            display: flex;
+            justify-content: center;
+
+            a {
+                padding: 20px;
+                color: #393939;
+
+                &:hover {
+                    color: $pinkColor;
+                }
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            color: #4d4c4c;
+        }
+    }
+
 }
