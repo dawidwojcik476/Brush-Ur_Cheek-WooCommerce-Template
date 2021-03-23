@@ -1,5 +1,6 @@
 # Brush-Ur_Cheek-WooCommerce-Template
 
+The project is in progress.
 
 
 [Link to Wordpress side code](https://github.com/dawidwojcik476/BrushUrCheek-WooCommerce-Template-Wordpress-Side)
