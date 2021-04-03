@@ -1,5 +1,17 @@
+@mixin mobiles {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin ipadpro {
+    @media (min-width: 1023px) and (max-width: 1030) {
         @content;
     }
 }
@@ -9,6 +21,8 @@
         @content;
     }
 }
+
+
 
 
 @mixin buttonHover {
